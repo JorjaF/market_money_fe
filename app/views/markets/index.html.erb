@@ -1,0 +1,22 @@
+<h1>All Markets</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>State</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @markets.each do |market| %>
+      <tr>
+        <td><%= market["attributes"]["name"] %></td>
+        <td><%= market["attributes"]["city"] %></td>
+        <td><%= market["attributes"]["state"] %></td>
+        <td><%= link_to 'More Info', market_path(market["id"]), method: :get %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

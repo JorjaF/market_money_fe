@@ -1,0 +1,15 @@
+<div class="centered-content">
+<h1><%= @market["attributes"]["name"] %></h1>
+<%= @market["attributes"]["street"] %>
+<br>
+<%= @market["attributes"]["city"] %>, <%= @market["attributes"]["state"] %> <%= @market["attributes"]["zip"] %>
+</div>
+
+<h4>Vendors at this Market:</h4>
+<ul>
+  <% @vendors.each do |vendor| %>
+    <li>
+      <%= link_to vendor["attributes"]["name"], vendor_path(vendor["id"]) %>
+    </li>
+  <% end %>
+</ul>
