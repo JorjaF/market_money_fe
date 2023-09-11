@@ -1,21 +1,25 @@
-<h1>All Markets</h1>
+<h1 class="text-center">Markets</h1>
 
-<table border="1">
+<table class="markets-table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>State</th>
-      <th></th>
+      <th class="text-center">Name</th>
+      <th class="text-center">City</th>
+      <th class="text-center">State</th>
+      <th class="text-center">Actions</th>
     </tr>
   </thead>
   <tbody>
-    <% @markets.each do |market| %>
-      <tr>
+    <% @markets.each_with_index do |market, index| %>
+      <tr class="market-row <%= index.even? ? 'even-row' : 'odd-row' %>">
         <td><%= market["attributes"]["name"] %></td>
         <td><%= market["attributes"]["city"] %></td>
         <td><%= market["attributes"]["state"] %></td>
-        <td><%= link_to 'More Info', market_path(market["id"]), method: :get %></td>
+        <td>
+          <%= form_tag market_path(market["id"]), method: :get do %>
+            <%= submit_tag 'More Info', class: 'more-info-button' %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

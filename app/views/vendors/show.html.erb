@@ -1,8 +1,8 @@
 <div class="centered-content">
   <h1><%= @vendor["attributes"]["name"] %></h1>
 </div>
-  <p>Contact Info:</p>
-  <p>Name: <%= @vendor["attributes"]["contact_name"] %></p>
-  <p>Phone: <%= @vendor["attributes"]["contact_phone"] %></p>
-  <p>Accepts Credit: <%= @vendor["attributes"]["accept_credit"] ? 'Yes' : 'No' %></p>
+  Contact Info:<br>
+  Name: <%= @vendor["attributes"]["contact_name"] %><br>
+  Phone: <%= @vendor["attributes"]["contact_phone"] %><br>
+  <p>Credit Accepted?: <%= @vendor["attributes"]["accept_credit"] ? 'YES' : 'NO' %></p>
   <p>Description: <%= @vendor["attributes"]["description"] %></p>

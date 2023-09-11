@@ -21,3 +21,37 @@
   align-items: center;
   justify-content: center;
 }
+
+/* app/assets/stylesheets/application.css (or .scss) */
+
+.markets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markets-table th,
+.markets-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left; /* Center align text in cells */
+}
+
+.markets-table th {
+  background-color: #f2f2f2;
+}
+
+.market-row {
+  background-color: #e6e6e6;
+}
+
+.even-row {
+  background-color: #f9f9f9;
+}
+
+.odd-row {
+  background-color: #e6e6e6;
+}
+
+.text-center {
+  text-align: center; /* Center align text */
+}
